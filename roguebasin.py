@@ -609,20 +609,21 @@ def create_v_tunnel(y1, y2, x):
         map[x][y].blocked = False
         map[x][y].block_sight = False
 
+
 # INPUT
 #  Handle key input
 def handle_keys():
     global game_state
 
 #    key = libtcod.console_check_for_keypress() # real-time
-    key = libtcod.console_check_for_keypress(libtcod.KEY_PRESSED) # turn-based
+    key = libtcod.console_check_for_keypress(libtcod.KEY_PRESSED)  # turn-based
 
     if key.vk == libtcod.KEY_ENTER and key.lalt:
         # Alt+Enter: toggle fullscreen
         libtcod.console_set_fullscreen(not libtcod.console_is_fullscreen())
 
     elif key.vk == libtcod.KEY_ESCAPE:
-        return 'exit' # exit game
+        return 'exit'  # exit game
 
     # movement keys
     if game_state == 'playing':
