@@ -641,7 +641,7 @@ def handle_keys():
 
             if key_char == 'g':
                 # pick up an item
-                for object in objects: # look for an item in the player's tile
+                for object in objects:  # look for an item in the player's tile
                     if object.x == player.x and object.y == player.y and object.item:
                         object.item.pick_up()
                         break
